@@ -1,0 +1,268 @@
+:root{
+    --principal: #c5ae3a;
+    --principal_transparente: #c5ae3aa6;
+    --principal_oscuro: #b9a334;
+    --secundario: #0a090e;
+    --terciario: #ffffff;
+
+    --separadores: #979797;
+
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --gris: #ececec;
+}
+
+/* Formato de texto -----------------------------------------------------*/
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1.2rem;
+}
+p{
+    font-size: 1rem;
+}
+
+/* Body ---------------------------------------------------------------------*/
+body{
+    text-align: center;
+    font-family: Raleway, sans-serif;
+}
+
+/* Header -------------------------------------------------------------------*/
+.fondo_Header{
+    background-color: var(--principal_oscuro);
+    height: 4rem;
+}
+header{
+    background-color: var(--principal_transparente);
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+header .logo{
+    color: var(--terciario);
+    display:flex;
+    align-items: center;
+    padding-left: 2rem; /* Despega el logo de la izquierda*/ 
+}
+header h1{
+    padding-left: 0.4rem;
+}
+header span{
+    font-size:1.2rem;
+}
+header .nav{
+    display: flex;
+}
+header a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--terciario);
+    padding: 0 1.5rem;
+}
+header a:hover{
+    font-weight: bold;
+    background-color: var(--principal_oscuro);
+    height: 3rem;
+    border-radius: 10%;
+}
+header .iconos{
+    display: flex;
+    padding: 2rem;
+}
+header .iconos a{
+    padding: 0.5rem 0.5rem;
+    border-radius: 20%;
+    height: 1rem;
+    cursor: pointer;
+}
+.iconos .icon:hover{
+    stroke-width: 2.8px;
+    background-color: var(--principal_oscuro);
+}
+
+.header_img{
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 25rem;
+    width: 100%;
+    position: relative;
+}
+.header_img::before{
+    content: "";
+    background-color: rgba(0, 0, 0, 20%);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+/* Panel Viajes --------------------------------------------------*/
+.panelViajes{
+    display: flex;
+    background-color: var(--gris); 
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.viaje{
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    width: 60rem;
+    height: 7rem;
+    margin-bottom: 1rem;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.viaje::before{
+    content: "";
+    background-color: rgba(0, 0, 0, 40%);
+    border-radius: 10px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+.viaje:hover{
+    transform: scale(1.05);
+    background-size: 130%;
+}
+.viaje h3{
+    z-index: 1;
+}
+.viaje p{
+    z-index: 1;
+}
+.Vergel{
+    background-image: url(../img/vergel_main.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.Saltillo{
+    background-image: url(../img/saltillo_main.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Sobre Nosotros -------------------------------------------------------------- */
+.titulo_sobreNosotros{
+    padding: 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--separadores);
+}
+
+.sobre_nosotros{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 5rem;
+    border-bottom: 1px solid var(--separadores);
+}
+.sobre_nosotros div{
+    width: 33.33%;
+    padding: 0 1rem 2rem 1rem;
+}
+.sobre_nosotros .icon{
+    stroke: var(--principal);
+}
+
+/* Panel_Slogan ------------------------------------------------------------*/
+.panel_slogan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/panel_Slogan.jpg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    color: var(--blanco);
+    width: 80%;
+    height: 30rem;
+    margin: 3rem auto;
+    position: relative;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.2);  
+}
+.panel_slogan::before{
+    background-color: rgba(0, 0, 0, 40%);
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+.panel_slogan div{
+    position: relative;
+    width: 40rem;
+}
+
+/* Puntos de venta -------------------------------------------------------- */
+.puntos_deVenta h2{
+    padding: 2rem;
+    font-size: 2rem;
+    border-top: 1px solid var(--separadores);
+}
+.image{
+    width: 50%;
+    height: 20rem;
+    margin: 0 auto;
+    background-image: url(../img/panel_PuntosVenta.jpg);
+    background-size: cover;
+    background-position: 50% 100%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    position: relative;
+}
+.image::before{
+    content: "";
+    background-color: rgba(0, 0, 0, 30%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+/* Botón contáctanos ---------------------------------------------------------*/
+#scrollToTopButton {
+    display: var(--blanco);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 1rem;
+    background-color: var(--secundario);
+    color: var(--blanco);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer --------------------------------------------------------------- */
+footer{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-top: 1px solid var(--principal);
+    width: 90%;
+    height: 4rem;
+    margin: 0 auto;
+}
